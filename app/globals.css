@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Pravac C · Pesak: svetla topla pozadina, svetlo smeđa kao boja brenda,
+   tamnija smeđa za dugmad i linkove (kontrast ≥ 4.5:1 sa belim). */
+@theme {
+  --color-bg: #fcfaf7;
+  --color-surface: #ffffff;
+  --color-ink: #262220;
+  --color-muted: #6f655d;
+  --color-line: #ece5dc;
+  --color-tint: #f5eee5;
+  --color-sand: #d2b08c;
+  --color-sand-light: #e9d7c2;
+  --color-brown: #8a6440;
+  --color-brown-dark: #6e4f32;
+  --color-danger: #a23b2a;
+  --color-success: #3f6b45;
+
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-card: 18px;
+  --shadow-card: 0 1px 2px rgb(60 35 15 / 0.06), 0 10px 26px -16px rgb(60 35 15 / 0.32);
+  --shadow-float: 0 18px 40px -20px rgb(60 35 15 / 0.4);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+    font-weight: 500;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  a {
+    text-underline-offset: 3px;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brown);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[10px] bg-brown px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-brown-dark disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-outline {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-[10px] border-[1.5px] border-brown px-5 py-2.5 text-[15px] font-semibold text-brown transition-colors hover:bg-tint;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.14em] text-brown;
+  }
+  .card {
+    @apply rounded-[var(--radius-card)] bg-surface shadow-[var(--shadow-card)];
+  }
+  .input {
+    @apply block min-h-11 w-full rounded-[10px] border border-line bg-surface px-3.5 py-2.5 text-[15px] text-ink placeholder:text-muted/70 focus:border-brown focus:outline-none focus:ring-2 focus:ring-sand/50 disabled:bg-tint disabled:text-muted aria-[invalid=true]:border-danger;
+  }
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-ink;
+  }
+  .prose-page {
+    @apply max-w-[68ch] space-y-4 text-[16px] leading-7 text-ink;
+  }
+  .prose-page h2 {
+    @apply pt-4 text-2xl;
+  }
+  .prose-page ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+  .prose-page a {
+    @apply text-brown underline;
+  }
+}

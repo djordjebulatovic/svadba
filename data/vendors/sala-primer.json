@@ -1,0 +1,31 @@
+{
+  "slug": "sala-primer",
+  "name": "Sala Primer",
+  "category": "sale",
+  "city": "beograd",
+  "area": "Novi Beograd",
+  "address": "Primer adresa bb (nije prava adresa)",
+  "description": "Ovo je izmišljen primer profila koji pokazuje kako izgleda stranica sale na sajtu. Podaci, cene i fotografije nisu pravi. Prava sala bi ovde opisala prostor, raspored stolova, mogućnost ceremonije, parking i sve što parove zanima pre prvog poziva.",
+  "priceFrom": 45,
+  "priceUnit": "po osobi",
+  "capacityMin": 80,
+  "capacityMax": 300,
+  "venueType": "sala",
+  "features": ["Parking", "Bina za bend", "Klima", "Pristup za invalidska kolica"],
+  "includes": ["Meni (predjelo, glavno jelo, desert)", "Posluženje i konobari", "Osnovna dekoracija stolova"],
+  "packages": [
+    { "name": "Osnovni meni (primer)", "priceFrom": 45, "includes": ["Hladno predjelo", "Glavno jelo", "Desert"] },
+    { "name": "Prošireni meni (primer)", "priceFrom": 58, "includes": ["Hladno i toplo predjelo", "Dva glavna jela", "Desert i ponoćni obrok"] }
+  ],
+  "images": [
+    "/vendors/sala-primer/1.jpg",
+    "/vendors/sala-primer/2.jpg",
+    "/vendors/sala-primer/3.jpg",
+    "/vendors/sala-primer/4.jpg",
+    "/vendors/sala-primer/5.jpg"
+  ],
+  "status": "published",
+  "verified": false,
+  "isExample": true,
+  "updatedAt": "2026-11-04"
+}

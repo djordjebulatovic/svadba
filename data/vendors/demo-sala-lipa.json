@@ -1,0 +1,36 @@
+{
+  "slug": "demo-sala-lipa",
+  "name": "Sala Lipa",
+  "category": "sale",
+  "city": "novi-sad",
+  "area": "Petrovaradin",
+  "address": "Izmišljena ulica 12, Petrovaradin",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Petrovaradin",
+  "phone": "+381 60 000 0000",
+  "email": "primer@example.com",
+  "website": "https://www.example.com",
+  "instagram": "primer_sala",
+  "description": "Izmišljena sala za demonstraciju. Prostrana sala sa pogledom na Dunav, sopstvenim parkingom i baštom za ceremoniju pod vedrim nebom. Kuhinja priprema domaći meni, a za bend je spremna bina sa ozvučenjem.",
+  "priceFrom": 40,
+  "priceUnit": "po osobi",
+  "capacityMin": 60,
+  "capacityMax": 220,
+  "venueType": "sala",
+  "features": ["Parking", "Terasa", "Bina za bend", "Bašta za ceremoniju"],
+  "includes": ["Meni sa tri sleda", "Posluženje", "Dekoracija stolova", "Ozvučenje za bend"],
+  "packages": [
+    { "name": "Klasični meni", "priceFrom": 40, "includes": ["Predjelo", "Glavno jelo", "Desert"] },
+    { "name": "Svečani meni", "priceFrom": 52, "includes": ["Hladno i toplo predjelo", "Dva glavna jela", "Torta i ponoćni obrok"] }
+  ],
+  "images": [
+    "/vendors/demo-sala-lipa/1.jpg",
+    "/vendors/demo-sala-lipa/2.jpg",
+    "/vendors/demo-sala-lipa/3.jpg",
+    "/vendors/demo-sala-lipa/4.jpg",
+    "/vendors/demo-sala-lipa/5.jpg"
+  ],
+  "status": "demo",
+  "demoToken": "sala-lipa-x7k2",
+  "verified": false,
+  "updatedAt": "2026-11-04"
+}
